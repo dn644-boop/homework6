@@ -1,0 +1,295 @@
+table, th, td {
+    border:1px solid black;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+  background-color: green;
+  padding: 12px;
+}
+.grid div {
+  background-color: springgreen;
+  padding: 20px;
+}
+.grid div.header {
+  grid-area: header;
+  text-align: center;
+  height: 50px;
+}
+.grid div.menu {
+  grid-area: menu;
+}
+.grid div.content {
+  grid-area: content;
+}
+.grid div.footer {
+  grid-area: footer;
+  text-align: center;  
+}
+.area {
+  grid-area: myArea;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-areas: 
+    "skill-header"
+    "skill-subheader skill-subheader skill-subheader";
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill);
+  background-color: blue;
+  border:5px solid turquoise;
+}
+.skill-grid div {
+  background-color: lightblue;
+}
+.skill-grid div.skill-header {
+  grid-area: auto;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill);
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.skill-grid div.skill-subheader {
+  grid-area: auto;
+  grid-template-columns: repeat(auto-fill);
+}
+.skill-grid div.skill-key {
+  grid-area: auto;
+  grid-template-columns: repeat(auto-fill);
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.area {
+  grid-area: myArea;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-areas: 
+    "project-header"
+    "project-subheader project-subheader project-subheader";
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill);
+  background-color: blue;
+  border:5px solid turquoise;
+}
+.project-grid div {
+  background-color: lightblue;
+}
+.project-grid div.project-header {
+  grid-area: auto;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill);
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.project-grid div.project-subheader {
+  grid-area: auto;
+  grid-template-columns: repeat(auto-fill);
+}
+.project-grid div.project-key {
+  grid-area: auto;
+  grid-template-columns: repeat(auto-fill);
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.area {
+  grid-area: myArea;
+}
+
+.grid-area {
+  display: grid;
+  grid-template-areas: 
+  '.'
+  '. . .' 
+  '. . .';
+  grid-gap: 10px;
+  padding: 20px;
+  grid-template-columns: auto-fill;
+  background-color: yellow;
+}
+
+.grid-area > div {
+  background-color: lightgreen;
+  text-align: left;
+  grid-template-columns: repeat(auto-fill);
+  padding: 20px;
+  margin: 20px;
+}
+
+.header:hover {
+  transform: scale(1.2); transition-duration: 2s; background-color: red;
+}
+.shortcuts-bar {
+  border:5px solid green;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  align-items: column;
+  position: sticky;
+  top: 120px;
+}
+
+.header {
+  border:5px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.menu {
+  border:5px solid green;
+  flex-flow: column wrap;
+  align-items: column;
+}
+
+.content {
+  border:5px solid green;
+  display: flex;
+  padding: 100px;
+  flex-flow: column wrap;
+  flex-grow: 1; 
+  flex-shrink: 1; 
+}
+
+.footer {
+  border:5px solid green;
+  position: sticky;
+  font-size: small;
+  height: 100px;
+  bottom: 0;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-heading {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact1 {
+  float: left;
+}
+
+.contact2 {
+  float: right;
+}
+
+.contact-heading {
+  font-size: medium;
+
+}
+
+.contact-info {
+  font-size: small;
+}
+
+.key-info {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.mini-heading:hover {
+  transform: scale(1.0); transition-duration: 2s; background-color: orange;
+}
+
+.download-resume:hover{
+  transform: rotate(360deg); transition-duration: 1s; background-color: yellow;
+}
+
+.seicard-images:hover {
+  transform: rotate(360deg); transition-duration: 2s; background-color: purple;
+} 
+
+.seicard-images {
+  float: none;
+}
+
+.shmup-images:hover {
+  transform: rotate(-360deg); transition-duration: 2s; background-color: purple;
+}
+
+.shmup-images {
+  float: none;
+}
+
+@media screen and (max-width: 680px) {
+  body {
+    font-size: small;
+  }
+  .seicard-images {
+    width: 300px;
+    height: 180px;
+  }
+  .shmup-images {
+    width: 300px;
+    height: 180px;
+  }
+  .content {
+    border:5px solid green;
+    display: flex;
+    padding: 50px;
+    flex-flow: column wrap;
+    flex-grow: 1; 
+    flex-shrink: 1; 
+  }
+}
+@media screen and (min-width: 681px) and (max-width: 968px) {
+  body {
+    font-size: medium;
+  }
+  .seicard-images {
+    width: 400px;
+    height: 240px;
+  }
+  .shmup-images {
+    width: 400px;
+    height: 240px;
+  }
+  .content {
+    border:5px solid green;
+    display: flex;
+    padding: 50px;
+    flex-flow: column wrap;
+    flex-grow: 1; 
+    flex-shrink: 1; 
+  }
+}
+@media screen and (min-width: 969px) {
+  body {
+    font-size: large;
+  }
+  .seicard-images {
+    width: 500px;
+    height: 300px;
+  }
+  .shmup-images {
+    width: 500px;
+    height: 300px;
+  }
+  .content {
+    border:5px solid green;
+    display: flex;
+    padding: 50px;
+    flex-flow: column wrap;
+    flex-grow: 1; 
+    flex-shrink: 1; 
+  }
+}
+
